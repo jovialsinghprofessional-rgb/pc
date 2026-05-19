@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PixelCraft Studio — Premium Web Design</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -687,7 +686,7 @@
     font-size: 0.95rem;
     color: var(--light);
   }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; position: relative; z-index: 1; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
   .form-label {
@@ -724,45 +723,11 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    cursor: pointer;
+    cursor: none;
     transition: all 0.3s;
     margin-top: 0.5rem;
   }
   .form-submit:hover { background: var(--gold-light); }
-  .form-submit:disabled {
-    background: var(--muted);
-    cursor: not-allowed;
-  }
-
-  /* TOAST NOTIFICATION */
-  .toast {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    padding: 1.2rem 1.8rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    z-index: 10000;
-    animation: slideIn 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-  .toast.success {
-    background: #10b981;
-    color: white;
-  }
-  .toast.error {
-    background: #ef4444;
-    color: white;
-  }
-  .toast.loading {
-    background: var(--gold);
-    color: var(--dark);
-  }
-  @keyframes slideIn {
-    from { transform: translateX(400px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
 
   /* FOOTER */
   footer {
@@ -1035,9 +1000,9 @@
         </div>
       </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-tag">Fitness</div>
-        <div class="portfolio-overlay-title">FitLife Studio</div>
-        <p class="portfolio-overlay-desc">Gym website with class schedule, trainer profiles & membership plans.</p>
+        <div class="portfolio-overlay-tag">Education</div>
+        <div class="portfolio-overlay-title">BrightMinds Academy</div>
+        <p class="portfolio-overlay-desc">Coaching centre site with course listings, fee structure & inquiry forms.</p>
       </div>
     </div>
 
@@ -1050,18 +1015,19 @@
             <div class="mock-dot" style="background:#27c840"></div>
           </div>
           <div class="mock-content" style="background:#1a0a1a">
-            <div class="mock-hero-block" style="background:linear-gradient(135deg,#6d28d9,#a855f7)"></div>
+            <div class="mock-hero-block" style="background:linear-gradient(135deg,#4c1d95,#8b5cf6)"></div>
             <div class="mock-row">
-              <div class="mock-block" style="flex:1;background:#3a1a3a;height:40px;border-radius:4px"></div>
-              <div class="mock-block" style="flex:1;background:#3a1a3a;height:40px;border-radius:4px"></div>
+              <div class="mock-block" style="flex:1;background:#3a1545;height:50px;border-radius:8px"></div>
+              <div class="mock-block" style="flex:1;background:#3a1545;height:50px;border-radius:8px"></div>
+              <div class="mock-block" style="flex:1;background:#3a1545;height:50px;border-radius:8px"></div>
             </div>
           </div>
         </div>
       </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-tag">Fashion</div>
-        <div class="portfolio-overlay-title">Trend Boutique</div>
-        <p class="portfolio-overlay-desc">E-commerce fashion store with product filters, wishlists & secure checkout.</p>
+        <div class="portfolio-overlay-tag">E-Commerce</div>
+        <div class="portfolio-overlay-title">GlamShop</div>
+        <p class="portfolio-overlay-desc">Fashion boutique store with product catalogue, cart & online payments.</p>
       </div>
     </div>
 
@@ -1073,110 +1039,112 @@
             <div class="mock-dot" style="background:#febc2e"></div>
             <div class="mock-dot" style="background:#27c840"></div>
           </div>
-          <div class="mock-content" style="background:#1a1a0a">
-            <div class="mock-hero-block" style="background:linear-gradient(135deg,#78350f,#d97706)"></div>
+          <div class="mock-content" style="background:#1a1208">
+            <div class="mock-hero-block" style="background:linear-gradient(135deg,#78350f,#f59e0b)"></div>
             <div class="mock-row">
-              <div class="mock-block" style="flex:2;background:#3a2a1a;height:30px;border-radius:4px"></div>
-              <div class="mock-block" style="flex:1;background:#3a2a1a;height:30px;border-radius:4px"></div>
+              <div class="mock-block" style="flex:3;background:#3a2a10;height:20px"></div>
+              <div class="mock-block" style="flex:1;background:#c9a84c;height:20px;border-radius:2px"></div>
             </div>
           </div>
         </div>
       </div>
       <div class="portfolio-overlay">
-        <div class="portfolio-overlay-tag">Education</div>
-        <div class="portfolio-overlay-title">Learn Academy</div>
-        <p class="portfolio-overlay-desc">Online learning platform with course management, student progress tracking.</p>
+        <div class="portfolio-overlay-tag">Real Estate</div>
+        <div class="portfolio-overlay-title">PropFinder</div>
+        <p class="portfolio-overlay-desc">Property listing site with search filters, virtual tours & agent contact.</p>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- PROCESS -->
 <section id="process">
-  <div class="section-tag">Our Process</div>
-  <h2 class="section-headline reveal">4-Step Journey to <em>Success</em></h2>
+  <div class="section-tag">How We Work</div>
+  <h2 class="section-headline reveal">Simple. Fast. <em>Delivered.</em></h2>
   <div class="process-steps reveal">
     <div class="process-step">
-      <div class="process-step-num">1</div>
-      <h3 class="process-step-title">Discovery</h3>
-      <p class="process-step-desc">We understand your business goals, target audience & unique requirements.</p>
+      <div class="process-step-num">01</div>
+      <h3 class="process-step-title">Discovery Call</h3>
+      <p class="process-step-desc">We discuss your business, goals, and vision in a free 30-minute consultation.</p>
     </div>
     <div class="process-step">
-      <div class="process-step-num">2</div>
-      <h3 class="process-step-title">Design</h3>
-      <p class="process-step-desc">Creating stunning visual mockups that align with your brand identity.</p>
+      <div class="process-step-num">02</div>
+      <h3 class="process-step-title">Design & Plan</h3>
+      <p class="process-step-desc">We create a custom layout and design plan tailored to your brand and audience.</p>
     </div>
     <div class="process-step">
-      <div class="process-step-num">3</div>
-      <h3 class="process-step-title">Development</h3>
-      <p class="process-step-desc">Building responsive, fast, and SEO-optimized websites with clean code.</p>
+      <div class="process-step-num">03</div>
+      <h3 class="process-step-title">Build & Review</h3>
+      <p class="process-step-desc">We develop your site and share previews for your feedback at every stage.</p>
     </div>
     <div class="process-step">
-      <div class="process-step-num">4</div>
-      <h3 class="process-step-title">Launch</h3>
-      <p class="process-step-desc">Deploy your website, provide training & ongoing support.</p>
+      <div class="process-step-num">04</div>
+      <h3 class="process-step-title">Launch 🚀</h3>
+      <p class="process-step-desc">We go live, test everything, and ensure your website performs perfectly from day one.</p>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
 <section id="pricing">
-  <div class="section-tag">Pricing Plans</div>
-  <h2 class="section-headline reveal">Transparent Pricing for <em>Every Budget</em></h2>
+  <div class="section-tag">Investment</div>
+  <h2 class="section-headline reveal">Transparent <em>Pricing</em></h2>
   <div class="pricing-grid reveal">
     <div class="pricing-card">
       <div class="plan-label">Starter</div>
       <div class="plan-price">
         <span class="plan-currency">₹</span>
-        <div class="plan-amount">15,999</div>
+        <span class="plan-amount">3,999</span>
       </div>
-      <div class="plan-period">one-time</div>
-      <p class="plan-desc">Perfect for small businesses and startups looking for an online presence.</p>
+      <p class="plan-desc">Perfect for freelancers, tutors, and small local businesses getting started online.</p>
       <ul class="plan-features">
-        <li><span class="check">✓</span> 5-8 Pages</li>
+        <li><span class="check">✓</span> 3–5 Pages</li>
         <li><span class="check">✓</span> Mobile Responsive</li>
         <li><span class="check">✓</span> Contact Form</li>
+        <li><span class="check">✓</span> WhatsApp Button</li>
         <li><span class="check">✓</span> Google Maps</li>
-        <li><span class="cross">✗</span> E-commerce</li>
-        <li><span class="cross">✗</span> Analytics</li>
+        <li><span class="check">✓</span> 7-Day Delivery</li>
+        <li><span class="cross">✗</span> E-Commerce Features</li>
+        <li><span class="cross">✗</span> Booking System</li>
       </ul>
       <a href="#contact" class="btn-plan">Get Started</a>
     </div>
-
     <div class="pricing-card featured">
       <div class="plan-label">Professional</div>
       <div class="plan-price">
         <span class="plan-currency">₹</span>
-        <div class="plan-amount">39,999</div>
+        <span class="plan-amount">8,999</span>
       </div>
-      <div class="plan-period">one-time</div>
-      <p class="plan-desc">Full-featured website with advanced functionality for growing businesses.</p>
+      <p class="plan-desc">For growing businesses that need a complete professional online presence and more features.</p>
       <ul class="plan-features">
-        <li><span class="check">✓</span> 10-15 Pages</li>
+        <li><span class="check">✓</span> 7–10 Pages</li>
         <li><span class="check">✓</span> Mobile Responsive</li>
-        <li><span class="check">✓</span> Advanced Forms</li>
-        <li><span class="check">✓</span> Blog/CMS</li>
-        <li><span class="check">✓</span> SEO Optimized</li>
-        <li><span class="check">✓</span> Analytics</li>
+        <li><span class="check">✓</span> Contact & Inquiry Forms</li>
+        <li><span class="check">✓</span> Gallery / Portfolio</li>
+        <li><span class="check">✓</span> Basic SEO Setup</li>
+        <li><span class="check">✓</span> Blog Section</li>
+        <li><span class="check">✓</span> Speed Optimization</li>
+        <li><span class="check">✓</span> 10-Day Delivery</li>
       </ul>
       <a href="#contact" class="btn-plan featured-btn">Get Started</a>
     </div>
-
     <div class="pricing-card">
-      <div class="plan-label">Enterprise</div>
+      <div class="plan-label">Premium</div>
       <div class="plan-price">
         <span class="plan-currency">₹</span>
-        <div class="plan-amount">79,999</div>
+        <span class="plan-amount">18,999</span>
       </div>
-      <div class="plan-period">one-time</div>
-      <p class="plan-desc">Complete e-commerce solution for businesses selling products online.</p>
+      <p class="plan-desc">Full-scale websites with e-commerce, booking systems and advanced features for serious growth.</p>
       <ul class="plan-features">
-        <li><span class="check">✓</span> 20+ Pages</li>
-        <li><span class="check">✓</span> E-commerce Setup</li>
+        <li><span class="check">✓</span> Unlimited Pages</li>
+        <li><span class="check">✓</span> E-Commerce / Online Store</li>
+        <li><span class="check">✓</span> Online Booking System</li>
         <li><span class="check">✓</span> Payment Gateway</li>
-        <li><span class="check">✓</span> Inventory System</li>
-        <li><span class="check">✓</span> Customer Support</li>
-        <li><span class="check">✓</span> Advanced Analytics</li>
+        <li><span class="check">✓</span> Advanced SEO</li>
+        <li><span class="check">✓</span> Admin Dashboard</li>
+        <li><span class="check">✓</span> 1 Month Free Support</li>
+        <li><span class="check">✓</span> 15-Day Delivery</li>
       </ul>
       <a href="#contact" class="btn-plan">Get Started</a>
     </div>
@@ -1185,44 +1153,42 @@
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
-  <div class="section-tag">What Clients Say</div>
-  <h2 class="section-headline reveal">Trusted by <em>50+ Happy Clients</em></h2>
+  <div class="section-tag">Client Love</div>
+  <h2 class="section-headline reveal">What Our Clients <em>Say</em></h2>
   <div class="testimonials-grid reveal">
     <div class="testimonial-card">
       <div class="stars">★★★★★</div>
       <div class="testimonial-quote">"</div>
-      <p class="testimonial-text">PixelCraft delivered an amazing website that exceeded all our expectations. Their attention to detail and professional approach made the entire process smooth.</p>
+      <p class="testimonial-text">Our clinic bookings increased by 40% within the first month of launching the website. The team understood exactly what we needed.</p>
       <div class="testimonial-author">
-        <div class="author-avatar" style="background: var(--gold); color: var(--dark);">AB</div>
+        <div class="author-avatar" style="background:#1e3a6e;color:#93c5fd">DR</div>
         <div>
-          <div class="author-name">Arjun Mehta</div>
-          <div class="author-role">Founder, TechStart</div>
+          <div class="author-name">Dr. Rakesh Sharma</div>
+          <div class="author-role">MediCare Clinic, Ludhiana</div>
         </div>
       </div>
     </div>
-
     <div class="testimonial-card">
       <div class="stars">★★★★★</div>
       <div class="testimonial-quote">"</div>
-      <p class="testimonial-text">We've seen a 300% increase in online inquiries since launching our new website. The design is gorgeous and the conversion optimization is top-notch!</p>
+      <p class="testimonial-text">I was skeptical about getting a website, but the results blew my mind. Now 60% of my new students find me through the website!</p>
       <div class="testimonial-author">
-        <div class="author-avatar" style="background: var(--gold-dim); color: var(--light);">PS</div>
+        <div class="author-avatar" style="background:#064e3b;color:#6ee7b7">PV</div>
         <div>
-          <div class="author-name">Priya Singh</div>
-          <div class="author-role">Director, Luxury Spa</div>
+          <div class="author-name">Priya Verma</div>
+          <div class="author-role">BrightMinds Academy, Chandigarh</div>
         </div>
       </div>
     </div>
-
     <div class="testimonial-card">
       <div class="stars">★★★★★</div>
       <div class="testimonial-quote">"</div>
-      <p class="testimonial-text">Fast delivery, incredible support, and a website that actually converts. Highly recommend PixelCraft to anyone serious about their online presence.</p>
+      <p class="testimonial-text">The online store they built for us is beautiful and so easy to manage. Our sales doubled in just 3 months. Highly recommend!</p>
       <div class="testimonial-author">
-        <div class="author-avatar" style="background: var(--dark4); color: var(--gold);">RK</div>
+        <div class="author-avatar" style="background:#4c1d95;color:#c4b5fd">AM</div>
         <div>
-          <div class="author-name">Rajesh Kumar</div>
-          <div class="author-role">Owner, Spice Kitchen</div>
+          <div class="author-name">Anjali Malhotra</div>
+          <div class="author-role">GlamShop Boutique, Amritsar</div>
         </div>
       </div>
     </div>
@@ -1233,202 +1199,138 @@
 <section id="contact">
   <div class="contact-layout">
     <div class="contact-left">
-      <h2 class="contact-headline">Get in <em style="color: var(--gold);">Touch</em></h2>
-      <p class="contact-desc">Have a project in mind? Let's work together to bring your vision to life. Fill out the form and we'll get back to you within 24 hours.</p>
-      
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="contact-headline">Let's Build Something <em>Great</em> Together</h2>
+      <p class="contact-desc">Ready to take your business online? Fill out the form and we'll get back to you within 24 hours with a free consultation and custom quote.</p>
       <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-label">Call / WhatsApp</div>
+            <div class="contact-info-val">+91 98765 43210</div>
+          </div>
+        </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">📧</div>
           <div>
             <div class="contact-info-label">Email</div>
-            <div class="contact-info-val">hello@pixelcraft.studio</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-icon">📱</div>
-          <div>
-            <div class="contact-info-label">Phone</div>
-            <div class="contact-info-val">+91 83072 00639</div>
+            <div class="contact-info-val">hello@pixelcraftstudio.in</div>
           </div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon">📍</div>
           <div>
-            <div class="contact-info-label">Address</div>
-            <div class="contact-info-val">Mumbai, India</div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-val">Ludhiana, Punjab, India</div>
           </div>
         </div>
       </div>
     </div>
-
-    <form class="contact-form" id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" id="clientName" name="clientName" required placeholder="John Doe"/>
+    <div class="contact-right">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="Rahul Sharma"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone / WhatsApp</label>
+            <input type="text" class="form-input" placeholder="+91 98765 43210"/>
+          </div>
         </div>
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" id="clientEmail" name="clientEmail" required placeholder="john@example.com"/>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Phone (Optional)</label>
-          <input type="tel" class="form-input" id="clientPhone" name="clientPhone" placeholder="+91 98765 43210"/>
+          <input type="email" class="form-input" placeholder="you@example.com"/>
         </div>
         <div class="form-group">
-          <label class="form-label">Service Interested</label>
-          <select class="form-select" id="serviceType" name="serviceType" required>
-            <option value="">Select Service</option>
-            <option value="Business Website">Business Website</option>
-            <option value="E-Commerce Store">E-Commerce Store</option>
-            <option value="Landing Page">Landing Page</option>
-            <option value="Other">Other</option>
+          <label class="form-label">Business Type</label>
+          <select class="form-select">
+            <option>Select your business...</option>
+            <option>Clinic / Hospital</option>
+            <option>Restaurant / Cafe</option>
+            <option>Coaching / Education</option>
+            <option>Salon / Parlour</option>
+            <option>Shop / Boutique</option>
+            <option>Real Estate</option>
+            <option>Gym / Fitness</option>
+            <option>Other</option>
           </select>
         </div>
+        <div class="form-group">
+          <label class="form-label">Package Interested In</label>
+          <select class="form-select">
+            <option>Select a package...</option>
+            <option>Starter — ₹3,999</option>
+            <option>Professional — ₹8,999</option>
+            <option>Premium — ₹18,999</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tell Us About Your Project</label>
+          <textarea class="form-textarea" placeholder="Briefly describe what kind of website you need and your goals..."></textarea>
+        </div>
+        <button class="form-submit" onclick="alert('Thank you! We will contact you within 24 hours. 🎉')">Request Free Consultation →</button>
       </div>
-
-      <div class="form-group">
-        <label class="form-label">Message</label>
-        <textarea class="form-textarea" id="clientMessage" name="clientMessage" required placeholder="Tell us about your project..."></textarea>
-      </div>
-
-      <button type="submit" class="form-submit" id="submitBtn">Send Inquiry</button>
-    </form>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Pixel<span style="color: var(--light);">Craft</span></div>
-  <div class="footer-copy">© 2026 PixelCraft Studio. All rights reserved.</div>
+  <div class="footer-logo">PixelCraft<span style="color:var(--light)">Studio</span></div>
+  <div class="footer-copy">© 2025 PixelCraft Studio. All rights reserved.</div>
   <ul class="footer-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#portfolio">Work</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </footer>
 
 <script>
-// ===== EMAILJS SETUP =====
-// Initialize EmailJS - REPLACE with your EmailJS Public Key
-emailjs.init("YOUR_EMAILJS_PUBLIC_KEY_HERE");
-
-// ===== FORM HANDLING =====
-const contactForm = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
-
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  // Disable button and show loading state
-  submitBtn.disabled = true;
-  const originalText = submitBtn.textContent;
-  submitBtn.textContent = 'Sending...';
-  
-  showToast('Sending your inquiry...', 'loading');
-
-  try {
-    // Prepare form data
-    const formData = {
-      clientName: document.getElementById('clientName').value,
-      clientEmail: document.getElementById('clientEmail').value,
-      clientPhone: document.getElementById('clientPhone').value,
-      serviceType: document.getElementById('serviceType').value,
-      clientMessage: document.getElementById('clientMessage').value,
-      submittedAt: new Date().toLocaleString('en-IN')
-    };
-
-    // Send email to owner
-    await emailjs.send(
-      "YOUR_EMAIL_SERVICE_ID", // Replace with your EmailJS Service ID
-      "YOUR_EMAIL_TEMPLATE_ID", // Replace with your EmailJS Template ID
-      {
-        to_email: "jovialsinghprofessional@gmail.com", // Replace with your email
-        client_name: formData.clientName,
-        client_email: formData.clientEmail,
-        client_phone: formData.clientPhone || "Not provided",
-        service_type: formData.serviceType,
-        message: formData.clientMessage,
-        submitted_at: formData.submittedAt
-      }
-    );
-
-    // Send confirmation email to client
-    await emailjs.send(
-      "YOUR_EMAIL_SERVICE_ID",
-      "YOUR_CONFIRMATION_TEMPLATE_ID", // Confirmation template
-      {
-        to_email: formData.clientEmail,
-        client_name: formData.clientName
-      }
-    );
-
-    // Success message
-    showToast('✓ Inquiry sent successfully! We\'ll contact you soon.', 'success');
-    contactForm.reset();
-    
-  } catch (error) {
-    console.error('Email send error:', error);
-    showToast('✗ Error sending inquiry. Please try again or contact us directly.', 'error');
-  } finally {
-    // Re-enable button
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-  }
-});
-
-// ===== TOAST NOTIFICATION =====
-function showToast(message, type = 'info') {
-  const toast = document.createElement('div');
-  toast.className = `toast ${type}`;
-  toast.textContent = message;
-  document.body.appendChild(toast);
-
-  // Auto remove after 4 seconds
-  setTimeout(() => {
-    toast.style.animation = 'slideOut 0.3s ease forwards';
-    setTimeout(() => toast.remove(), 300);
-  }, 4000);
-}
-
-// ===== CUSTOM CURSOR =====
-const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
-
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  
-  cursorRing.style.left = (e.clientX - 18) + 'px';
-  cursorRing.style.top = (e.clientY - 18) + 'px';
-});
-
-// ===== NAVBAR SCROLL EFFECT =====
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-});
-
-// ===== REVEAL ON SCROLL =====
-const reveals = document.querySelectorAll('.reveal');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx - 6 + 'px';
+    cursor.style.top = my - 6 + 'px';
   });
-}, { threshold: 0.1 });
+  function animRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx - 18 + 'px';
+    ring.style.top = ry - 18 + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+  document.querySelectorAll('a, button, .portfolio-item, .service-card, .pricing-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(2.5)');
+    el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
+  });
 
-reveals.forEach(reveal => observer.observe(reveal));
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Smooth anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
 </script>
 </body>
 </html>
